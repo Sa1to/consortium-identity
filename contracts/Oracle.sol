@@ -23,7 +23,7 @@ contract Oracle {
     ChairmanRegistry registry;
 
     // chairmanAddress => proposal
-    mapping (address => Proposal) proposals;
+    mapping (address => Proposal) public proposals;
 
     bool locked;
 

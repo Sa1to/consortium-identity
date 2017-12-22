@@ -1,9 +1,8 @@
 const ChairmanRegistry = artifacts.require("./ChairmanRegistry.sol");
 const Oracle = artifacts.require("./Oracle.sol");
 
-const oracleMembers = ["0x5862bf9e0d2834e613eabafe92b21237d17c7679"];
 
-module.exports = function(deployer) {
-  deployer.deploy(ChairmanRegistry);
-  deployer.deploy(Oracle(oracleMembers));
+var oracleMembers = ['0x540e8aa6bd075ed64f248c7f4d9241a8358e59b9'];
+module.exports = function (deployer) {
+    deployer.deploy(Oracle, oracleMembers);
 };
